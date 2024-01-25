@@ -1184,7 +1184,12 @@ var Editable$1 = props => {
       var {
         anchorNode,
         focusNode
-      } = domSelection;
+      } = domSelection; // The DOM selection and the activeElement can be briefly inconsistent (wtf).
+
+      if (!activeElement || !activeElement.contains(anchorNode) || !activeElement.contains(focusNode)) {
+        return;
+      }
+
       var anchorNodeSelectable = hasEditableTarget(editor, anchorNode) || isTargetInsideNonReadonlyVoid(editor, anchorNode);
       var focusNodeSelectable = hasEditableTarget(editor, focusNode) || isTargetInsideNonReadonlyVoid(editor, focusNode);
 

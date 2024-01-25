@@ -300,6 +300,15 @@ export const Editable = (props: EditableProps) => {
 
         const { anchorNode, focusNode } = domSelection
 
+        // The DOM selection and the activeElement can be briefly inconsistent (wtf).
+        if (
+          !activeElement ||
+          !activeElement.contains(anchorNode) ||
+          !activeElement.contains(focusNode)
+        ) {
+          return
+        }
+
         const anchorNodeSelectable =
           hasEditableTarget(editor, anchorNode) ||
           isTargetInsideNonReadonlyVoid(editor, anchorNode)
