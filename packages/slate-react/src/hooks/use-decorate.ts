@@ -8,6 +8,7 @@ import { Range, NodeEntry } from 'slate'
 export const DecorateContext = createContext<(entry: NodeEntry) => Range[]>(
   () => []
 )
+DecorateContext.displayName = 'DecorateContext'
 
 /**
  * Get the current `decorate` prop of the editable.

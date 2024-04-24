@@ -5,6 +5,7 @@ import { createContext, useContext } from 'react'
  */
 
 export const ReadOnlyContext = createContext(false)
+ReadOnlyContext.displayName = 'ReadOnlyContext'
 
 /**
  * Get the current `readOnly` state of the editor.
