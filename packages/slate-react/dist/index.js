@@ -740,6 +740,7 @@ var DefaultElement = function DefaultElement(props) {
  */
 
 var EditorContext = /*#__PURE__*/React.createContext(null);
+EditorContext.displayName = 'EditorContext';
 /**
  * Get the current editor object from the React context.
  */
@@ -761,25 +762,13 @@ var useSlateStatic = function useSlateStatic() {
 var DecorateContext = /*#__PURE__*/React.createContext(function () {
   return [];
 });
+DecorateContext.displayName = 'DecorateContext';
 /**
  * Get the current `decorate` prop of the editable.
  */
 
 var useDecorate = function useDecorate() {
   return React.useContext(DecorateContext);
-};
-
-/**
- * A React context for sharing the `selected` state of an element.
- */
-
-var SelectedContext = /*#__PURE__*/React.createContext(false);
-/**
- * Get the current `selected` state of an element.
- */
-
-var useSelected = function useSelected() {
-  return React.useContext(SelectedContext);
 };
 
 function _createForOfIteratorHelper$3(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray$3(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
@@ -831,10 +820,7 @@ var useChildren = function useChildren(props) {
     }
 
     if (slate.Element.isElement(n)) {
-      children.push( /*#__PURE__*/React__default['default'].createElement(SelectedContext.Provider, {
-        key: "provider-".concat(key.id),
-        value: !!sel
-      }, /*#__PURE__*/React__default['default'].createElement(MemoizedElement, {
+      children.push( /*#__PURE__*/React__default['default'].createElement(MemoizedElement, {
         decorations: ds,
         element: n,
         key: key.id,
@@ -842,7 +828,7 @@ var useChildren = function useChildren(props) {
         renderPlaceholder: renderPlaceholder,
         renderLeaf: renderLeaf,
         selection: sel
-      })));
+      }));
     } else {
       children.push( /*#__PURE__*/React__default['default'].createElement(MemoizedText, {
         decorations: ds,
@@ -958,6 +944,7 @@ var Hotkeys = {
  */
 
 var ReadOnlyContext = /*#__PURE__*/React.createContext(false);
+ReadOnlyContext.displayName = 'ReadOnlyContext';
 /**
  * Get the current `readOnly` state of the editor.
  */
@@ -972,6 +959,7 @@ var useReadOnly = function useReadOnly() {
  */
 
 var SlateContext = /*#__PURE__*/React.createContext(null);
+SlateContext.displayName = 'SlateContext';
 /**
  * Get the current editor object from the React context.
  */
@@ -4248,6 +4236,7 @@ var AndroidEditable = function AndroidEditable(props) {
  */
 
 var FocusedContext = /*#__PURE__*/React.createContext(false);
+FocusedContext.displayName = 'FocusedContext';
 /**
  * Get the current `focused` state of the editor.
  */
@@ -4265,6 +4254,7 @@ function isError(error) {
 
 
 var SlateSelectorContext = /*#__PURE__*/React.createContext({});
+SlateSelectorContext.displayName = 'SlateSelectorContext';
 
 var refEquality = function refEquality(a, b) {
   return a === b;
@@ -4495,6 +4485,20 @@ var useEditor = function useEditor() {
   }
 
   return editor;
+};
+
+/**
+ * A React context for sharing the `selected` state of an element.
+ */
+
+var SelectedContext = /*#__PURE__*/React.createContext(false);
+SelectedContext.displayName = 'SelectedContext';
+/**
+ * Get the current `selected` state of an element.
+ */
+
+var useSelected = function useSelected() {
+  return React.useContext(SelectedContext);
 };
 
 /**

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useEffect, useRef, useState, Fragment, useContext, createContext, useMemo, useCallback, useReducer } from 'react';
+import React, { useLayoutEffect, useEffect, useRef, useState, Fragment, createContext, useContext, useMemo, useCallback, useReducer } from 'react';
 import { Path, Node, Editor, Text as Text$1, Range, Element as Element$1, Transforms, Scrubber } from 'slate';
 import getDirection from 'direction';
 import debounce from 'lodash/debounce';
@@ -583,6 +583,7 @@ var DefaultElement = props => {
  */
 
 var EditorContext = /*#__PURE__*/createContext(null);
+EditorContext.displayName = 'EditorContext';
 /**
  * Get the current editor object from the React context.
  */
@@ -602,25 +603,13 @@ var useSlateStatic = () => {
  */
 
 var DecorateContext = /*#__PURE__*/createContext(() => []);
+DecorateContext.displayName = 'DecorateContext';
 /**
  * Get the current `decorate` prop of the editable.
  */
 
 var useDecorate = () => {
   return useContext(DecorateContext);
-};
-
-/**
- * A React context for sharing the `selected` state of an element.
- */
-
-var SelectedContext = /*#__PURE__*/createContext(false);
-/**
- * Get the current `selected` state of an element.
- */
-
-var useSelected = () => {
-  return useContext(SelectedContext);
 };
 
 /**
@@ -659,10 +648,7 @@ var useChildren = props => {
     }
 
     if (Element$1.isElement(n)) {
-      children.push( /*#__PURE__*/React.createElement(SelectedContext.Provider, {
-        key: "provider-".concat(key.id),
-        value: !!sel
-      }, /*#__PURE__*/React.createElement(MemoizedElement, {
+      children.push( /*#__PURE__*/React.createElement(MemoizedElement, {
         decorations: ds,
         element: n,
         key: key.id,
@@ -670,7 +656,7 @@ var useChildren = props => {
         renderPlaceholder: renderPlaceholder,
         renderLeaf: renderLeaf,
         selection: sel
-      })));
+      }));
     } else {
       children.push( /*#__PURE__*/React.createElement(MemoizedText, {
         decorations: ds,
@@ -786,6 +772,7 @@ var Hotkeys = {
  */
 
 var ReadOnlyContext = /*#__PURE__*/createContext(false);
+ReadOnlyContext.displayName = 'ReadOnlyContext';
 /**
  * Get the current `readOnly` state of the editor.
  */
@@ -800,6 +787,7 @@ var useReadOnly = () => {
  */
 
 var SlateContext = /*#__PURE__*/createContext(null);
+SlateContext.displayName = 'SlateContext';
 /**
  * Get the current editor object from the React context.
  */
@@ -3980,6 +3968,7 @@ var AndroidEditable = props => {
  */
 
 var FocusedContext = /*#__PURE__*/createContext(false);
+FocusedContext.displayName = 'FocusedContext';
 /**
  * Get the current `focused` state of the editor.
  */
@@ -3997,6 +3986,7 @@ function isError(error) {
 
 
 var SlateSelectorContext = /*#__PURE__*/createContext({});
+SlateSelectorContext.displayName = 'SlateSelectorContext';
 
 var refEquality = (a, b) => a === b;
 /**
@@ -4203,6 +4193,20 @@ var useEditor = () => {
   }
 
   return editor;
+};
+
+/**
+ * A React context for sharing the `selected` state of an element.
+ */
+
+var SelectedContext = /*#__PURE__*/createContext(false);
+SelectedContext.displayName = 'SelectedContext';
+/**
+ * Get the current `selected` state of an element.
+ */
+
+var useSelected = () => {
+  return useContext(SelectedContext);
 };
 
 /**
