@@ -5,6 +5,7 @@ import { createContext, useContext } from 'react'
  */
 
 export const SelectedContext = createContext(false)
+SelectedContext.displayName = 'SelectedContext'
 
 /**
  * Get the current `selected` state of an element.

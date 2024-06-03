@@ -740,6 +740,7 @@ var DefaultElement = function DefaultElement(props) {
  */
 
 var EditorContext = /*#__PURE__*/React.createContext(null);
+EditorContext.displayName = 'EditorContext';
 /**
  * Get the current editor object from the React context.
  */
@@ -761,6 +762,7 @@ var useSlateStatic = function useSlateStatic() {
 var DecorateContext = /*#__PURE__*/React.createContext(function () {
   return [];
 });
+DecorateContext.displayName = 'DecorateContext';
 /**
  * Get the current `decorate` prop of the editable.
  */
@@ -774,6 +776,7 @@ var useDecorate = function useDecorate() {
  */
 
 var SelectedContext = /*#__PURE__*/React.createContext(false);
+SelectedContext.displayName = 'SelectedContext';
 /**
  * Get the current `selected` state of an element.
  */
@@ -958,6 +961,7 @@ var Hotkeys = {
  */
 
 var ReadOnlyContext = /*#__PURE__*/React.createContext(false);
+ReadOnlyContext.displayName = 'ReadOnlyContext';
 /**
  * Get the current `readOnly` state of the editor.
  */
@@ -972,6 +976,7 @@ var useReadOnly = function useReadOnly() {
  */
 
 var SlateContext = /*#__PURE__*/React.createContext(null);
+SlateContext.displayName = 'SlateContext';
 /**
  * Get the current editor object from the React context.
  */
@@ -4248,6 +4253,7 @@ var AndroidEditable = function AndroidEditable(props) {
  */
 
 var FocusedContext = /*#__PURE__*/React.createContext(false);
+FocusedContext.displayName = 'FocusedContext';
 /**
  * Get the current `focused` state of the editor.
  */
@@ -4265,6 +4271,7 @@ function isError(error) {
 
 
 var SlateSelectorContext = /*#__PURE__*/React.createContext({});
+SlateSelectorContext.displayName = 'SlateSelectorContext';
 
 var refEquality = function refEquality(a, b) {
   return a === b;
