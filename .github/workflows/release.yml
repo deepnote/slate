@@ -31,9 +31,13 @@ jobs:
 
       - name: Install dependencies
         run: yarn
+        env:
+          YARN_IGNORE_NODE: 1
 
       - name: Prepare release
         run: yarn prerelease
+        env:
+          YARN_IGNORE_NODE: 1
 
       # https://github.com/changesets/action
       - name: Create release pull request or Publish to npm

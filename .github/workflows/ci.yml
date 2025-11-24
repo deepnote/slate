@@ -30,3 +30,4 @@ jobs:
         run: yarn && yarn build && yarn ${{ matrix.command }}
         env:
           CI: true
+          YARN_IGNORE_NODE: 1
