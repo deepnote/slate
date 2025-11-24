@@ -41,9 +41,9 @@
     "source-map-loader": "^0.2.4"
   },
   "peerDependencies": {
+    "@deepnote/slate": ">=0.65.3",
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "@deepnote/slate": ">=0.65.3"
+    "react-dom": ">=16.8.0"
   },
   "umdGlobals": {
     "react": "React",
