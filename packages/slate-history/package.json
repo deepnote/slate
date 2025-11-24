@@ -1,8 +1,11 @@
 {
-  "name": "slate-history",
+  "name": "@deepnote/slate-history",
   "description": "An operation-based history implementation for Slate editors.",
   "version": "0.66.0",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "git://github.com/ianstormtaylor/slate.git",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -24,7 +27,7 @@
     "source-map-loader": "^0.2.4"
   },
   "peerDependencies": {
-    "slate": ">=0.65.3"
+    "slate": "npm:@deepnote/slate@>=0.81.1"
   },
   "umdGlobals": {
     "slate": "Slate"

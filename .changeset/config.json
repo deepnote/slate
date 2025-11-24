@@ -1,11 +1,15 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@1.5.0/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    { "repo": "ianstormtaylor/slate" }
-  ],
+  "changelog": false,
   "commit": false,
-  "linked": [["slate", "slate-history", "slate-hyperscript", "slate-react"]],
+  "linked": [
+    [
+      "@deepnote/slate",
+      "@deepnote/slate-history",
+      "@deepnote/slate-hyperscript",
+      "@deepnote/slate-react"
+    ]
+  ],
   "access": "public",
   "baseBranch": "deepnote",
   "updateInternalDependencies": "patch",
