@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.7.4",
+    "@deepnote/slate": "workspace:*",
+    "@deepnote/slate-hyperscript": "workspace:*",
     "@types/jest": "^27.4.1",
     "@types/jsdom": "^16.2.14",
     "@types/react": "^16.9.13",
@@ -36,8 +38,6 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "react-test-renderer": ">=16.8.0",
-    "slate": "^0.81.0",
-    "slate-hyperscript": "^0.77.0",
     "source-map-loader": "^0.2.4"
   },
   "peerDependencies": {

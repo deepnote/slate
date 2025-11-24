@@ -1,7 +1,7 @@
-import { BaseRange, BaseText } from 'slate'
+import { BaseRange, BaseText } from '@deepnote/slate'
 import { ReactEditor } from './plugin/react-editor'
 
-declare module 'slate' {
+declare module '@deepnote/slate' {
   interface CustomTypes {
     Editor: ReactEditor
     Text: BaseText & {
@@ -9,6 +9,7 @@ declare module 'slate' {
     }
     Range: BaseRange & {
       placeholder?: string
+      multiBlock?: boolean
     }
   }
 }
