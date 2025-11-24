@@ -2,8 +2,8 @@ import React, { useMemo } from 'react'
 import isUrl from 'is-url'
 import { isKeyHotkey } from 'is-hotkey'
 import { css } from '@emotion/css'
-import { Editable, withReact, useSlate, useSelected } from 'slate-react'
-import * as SlateReact from 'slate-react'
+import { Editable, withReact, useSlate, useSelected } from '@deepnote/slate-react'
+import * as SlateReact from '@deepnote/slate-react'
 import {
   Transforms,
   Editor,
@@ -11,8 +11,8 @@ import {
   createEditor,
   Element as SlateElement,
   Descendant,
-} from 'slate'
-import { withHistory } from 'slate-history'
+} from '@deepnote/slate'
+import { withHistory } from '@deepnote/slate-history'
 import { LinkElement, ButtonElement } from './custom-types'
 
 import { Button, Icon, Toolbar } from '../components'

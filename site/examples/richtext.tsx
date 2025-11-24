@@ -1,14 +1,14 @@
 import React, { useCallback, useMemo } from 'react'
 import isHotkey from 'is-hotkey'
-import { Editable, withReact, useSlate, Slate } from 'slate-react'
+import { Editable, withReact, useSlate, Slate } from '@deepnote/slate-react'
 import {
   Editor,
   Transforms,
   createEditor,
   Descendant,
   Element as SlateElement,
-} from 'slate'
-import { withHistory } from 'slate-history'
+} from '@deepnote/slate'
+import { withHistory } from '@deepnote/slate-history'
 
 import { Button, Icon, Toolbar } from '../components'
 

@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
+import { Slate, Editable, withReact } from '@deepnote/slate-react'
 import {
   Editor,
   Range,
@@ -7,8 +7,8 @@ import {
   Descendant,
   createEditor,
   Element as SlateElement,
-} from 'slate'
-import { withHistory } from 'slate-history'
+} from '@deepnote/slate'
+import { withHistory } from '@deepnote/slate-history'
 
 const TablesExample = () => {
   const renderElement = useCallback(props => <Element {...props} />, [])

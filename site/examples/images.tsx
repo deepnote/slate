@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import imageExtensions from 'image-extensions'
 import isUrl from 'is-url'
-import { Transforms, createEditor, Descendant } from 'slate'
+import { Transforms, createEditor, Descendant } from '@deepnote/slate'
 import {
   Slate,
   Editable,
@@ -10,8 +10,8 @@ import {
   useFocused,
   withReact,
   ReactEditor,
-} from 'slate-react'
-import { withHistory } from 'slate-history'
+} from '@deepnote/slate-react'
+import { withHistory } from '@deepnote/slate-history'
 import { css } from '@emotion/css'
 
 import { Button, Icon, Toolbar } from '../components'

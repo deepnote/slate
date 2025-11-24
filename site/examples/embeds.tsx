@@ -4,14 +4,14 @@ import {
   createEditor,
   Element as SlateElement,
   Descendant,
-} from 'slate'
+} from '@deepnote/slate'
 import {
   Slate,
   Editable,
   withReact,
   useSlateStatic,
   ReactEditor,
-} from 'slate-react'
+} from '@deepnote/slate-react'
 
 const EmbedsExample = () => {
   const editor = useMemo(() => withEmbeds(withReact(createEditor())), [])

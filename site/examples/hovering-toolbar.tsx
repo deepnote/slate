@@ -1,5 +1,5 @@
 import React, { useMemo, useRef, useEffect } from 'react'
-import { Slate, Editable, withReact, useSlate, useFocused } from 'slate-react'
+import { Slate, Editable, withReact, useSlate, useFocused } from '@deepnote/slate-react'
 import {
   Editor,
   Transforms,
@@ -7,9 +7,9 @@ import {
   createEditor,
   Descendant,
   Range,
-} from 'slate'
+} from '@deepnote/slate'
 import { css } from '@emotion/css'
-import { withHistory } from 'slate-history'
+import { withHistory } from '@deepnote/slate-history'
 
 import { Button, Icon, Menu, Portal } from '../components'
 

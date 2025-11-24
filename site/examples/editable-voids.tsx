@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'
-import { Transforms, createEditor, Descendant } from 'slate'
-import { Slate, Editable, useSlateStatic, withReact } from 'slate-react'
-import { withHistory } from 'slate-history'
+import { Transforms, createEditor, Descendant } from '@deepnote/slate'
+import { Slate, Editable, useSlateStatic, withReact } from '@deepnote/slate-react'
+import { withHistory } from '@deepnote/slate-history'
 import { css } from '@emotion/css'
 
 import RichTextEditor from './richtext'

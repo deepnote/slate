@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
-import { createEditor, Descendant } from 'slate'
-import { Slate, Editable, withReact } from 'slate-react'
+import { createEditor, Descendant } from '@deepnote/slate'
+import { Slate, Editable, withReact } from '@deepnote/slate-react'
 
 const ReadOnlyExample = () => {
   const editor = useMemo(() => withReact(createEditor()), [])

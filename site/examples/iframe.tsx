@@ -1,9 +1,9 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
 import isHotkey from 'is-hotkey'
-import { Editable, withReact, useSlate, Slate, ReactEditor } from 'slate-react'
-import { Editor, createEditor, Descendant } from 'slate'
-import { withHistory } from 'slate-history'
+import { Editable, withReact, useSlate, Slate, ReactEditor } from '@deepnote/slate-react'
+import { Editor, createEditor, Descendant } from '@deepnote/slate'
+import { withHistory } from '@deepnote/slate-history'
 
 import { Button, Icon, Toolbar } from '../components'
 

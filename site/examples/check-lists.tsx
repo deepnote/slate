@@ -6,7 +6,7 @@ import {
   useSlateStatic,
   useReadOnly,
   ReactEditor,
-} from 'slate-react'
+} from '@deepnote/slate-react'
 import {
   Editor,
   Transforms,
@@ -15,9 +15,9 @@ import {
   createEditor,
   Descendant,
   Element as SlateElement,
-} from 'slate'
+} from '@deepnote/slate'
 import { css } from '@emotion/css'
-import { withHistory } from 'slate-history'
+import { withHistory } from '@deepnote/slate-history'
 
 const initialValue: Descendant[] = [
   {

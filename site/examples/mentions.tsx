@@ -1,6 +1,6 @@
 import React, { useMemo, useCallback, useRef, useEffect, useState } from 'react'
-import { Editor, Transforms, Range, createEditor, Descendant } from 'slate'
-import { withHistory } from 'slate-history'
+import { Editor, Transforms, Range, createEditor, Descendant } from '@deepnote/slate'
+import { withHistory } from '@deepnote/slate-history'
 import {
   Slate,
   Editable,
@@ -8,7 +8,7 @@ import {
   withReact,
   useSelected,
   useFocused,
-} from 'slate-react'
+} from '@deepnote/slate-react'
 
 import { Portal } from '../components'
 import { MentionElement } from './custom-types'

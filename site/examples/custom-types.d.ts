@@ -6,9 +6,9 @@ import {
   Editor,
   Descendant,
   BaseEditor,
-} from 'slate'
-import { ReactEditor } from 'slate-react'
-import { HistoryEditor } from 'slate-history'
+} from '@deepnote/slate'
+import { ReactEditor } from '@deepnote/slate-react'
+import { HistoryEditor } from '@deepnote/slate-history'
 
 export type BlockQuoteElement = {
   type: 'block-quote'
