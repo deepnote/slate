@@ -1,9 +1,12 @@
 {
-  "name": "slate-hyperscript",
+  "name": "@deepnote/slate-hyperscript",
   "description": "A hyperscript helper for creating Slate documents.",
   "version": "0.77.0",
   "license": "MIT",
-  "repository": "git://github.com/ianstormtaylor/slate.git",
+  "repository": "git://github.com/deepnote/slate.git",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -22,7 +25,7 @@
     "source-map-loader": "^0.2.4"
   },
   "peerDependencies": {
-    "slate": ">=0.65.3"
+    "@deepnote/slate": ">=0.65.3"
   },
   "umdGlobals": {
     "slate": "Slate"

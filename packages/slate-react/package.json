@@ -1,9 +1,12 @@
 {
-  "name": "slate-react",
+  "name": "@deepnote/slate-react",
   "description": "Tools for building completely customizable richtext editors with React.",
   "version": "0.81.0",
   "license": "MIT",
-  "repository": "git://github.com/ianstormtaylor/slate.git",
+  "repository": "git://github.com/deepnote/slate.git",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -40,7 +43,7 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "slate": ">=0.65.3"
+    "@deepnote/slate": ">=0.65.3"
   },
   "umdGlobals": {
     "react": "React",

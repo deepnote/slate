@@ -1,9 +1,12 @@
 {
-  "name": "slate",
+  "name": "@deepnote/slate",
   "description": "A completely customizable framework for building rich text editors.",
   "version": "0.81.1",
   "license": "MIT",
-  "repository": "git://github.com/ianstormtaylor/slate.git",
+  "repository": "git://github.com/deepnote/slate.git",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
