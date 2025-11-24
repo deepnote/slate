@@ -51,13 +51,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Prepare release
         run: yarn prerelease
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
 
       # https://github.com/atlassian/changesets/blob/master/docs/snapshot-releases.md
       - name: Release to @pr channel
