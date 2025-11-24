@@ -24,7 +24,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.x
-          cache: yarn
 
       - name: Run ${{ matrix.command }}
         run: yarn && yarn build && yarn ${{ matrix.command }}
