@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
-import { Editor, Node, Descendant, Scrubber } from 'slate'
+import { Editor, Node, Descendant, Scrubber } from '@deepnote/slate'
 import { ReactEditor } from '../plugin/react-editor'
 import { FocusedContext } from '../hooks/use-focused'
 import { EditorContext } from '../hooks/use-slate-static'

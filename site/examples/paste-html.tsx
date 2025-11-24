@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react'
-import { jsx } from 'slate-hyperscript'
+import { jsx } from '@deepnote/slate-hyperscript'
 import { Transforms, createEditor, Descendant } from '@deepnote/slate'
 import { withHistory } from '@deepnote/slate-history'
 import { css } from '@emotion/css'

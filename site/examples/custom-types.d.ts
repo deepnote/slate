@@ -111,7 +111,7 @@ export type EmptyText = {
 
 export type CustomEditor = BaseEditor & ReactEditor & HistoryEditor
 
-declare module 'slate' {
+declare module '@deepnote/slate' {
   interface CustomTypes {
     Editor: CustomEditor
     Element: CustomElement

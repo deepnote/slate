@@ -9,7 +9,7 @@ import {
   Transforms,
   Path,
   RangeRef,
-} from 'slate'
+} from '@deepnote/slate'
 import getDirection from 'direction'
 import debounce from 'lodash/debounce'
 import throttle from 'lodash/throttle'

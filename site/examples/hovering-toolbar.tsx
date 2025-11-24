@@ -1,5 +1,11 @@
 import React, { useMemo, useRef, useEffect } from 'react'
-import { Slate, Editable, withReact, useSlate, useFocused } from '@deepnote/slate-react'
+import {
+  Slate,
+  Editable,
+  withReact,
+  useSlate,
+  useFocused,
+} from '@deepnote/slate-react'
 import {
   Editor,
   Transforms,

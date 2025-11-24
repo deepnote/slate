@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react'
-import { Editor } from 'slate'
+import { Editor } from '@deepnote/slate'
 import { ReactEditor } from '../plugin/react-editor'
 
 /**

@@ -1,6 +1,11 @@
 import React, { useState, useMemo } from 'react'
 import { Transforms, createEditor, Descendant } from '@deepnote/slate'
-import { Slate, Editable, useSlateStatic, withReact } from '@deepnote/slate-react'
+import {
+  Slate,
+  Editable,
+  useSlateStatic,
+  withReact,
+} from '@deepnote/slate-react'
 import { withHistory } from '@deepnote/slate-history'
 import { css } from '@emotion/css'
 

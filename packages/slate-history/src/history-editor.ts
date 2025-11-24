@@ -1,4 +1,4 @@
-import { BaseEditor, Editor } from 'slate'
+import { BaseEditor, Editor } from '@deepnote/slate'
 import { History } from './history'
 
 /**

@@ -1,4 +1,4 @@
-import { Editor, Path, Range, Text } from 'slate'
+import { Editor, Path, Range, Text } from '@deepnote/slate'
 
 import { ReactEditor } from '../../'
 import { DOMNode } from '../../utils/dom'

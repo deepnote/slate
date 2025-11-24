@@ -1,5 +1,11 @@
 import React, { useMemo, useCallback, useRef, useEffect, useState } from 'react'
-import { Editor, Transforms, Range, createEditor, Descendant } from '@deepnote/slate'
+import {
+  Editor,
+  Transforms,
+  Range,
+  createEditor,
+  Descendant,
+} from '@deepnote/slate'
 import { withHistory } from '@deepnote/slate-history'
 import {
   Slate,

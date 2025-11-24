@@ -2,7 +2,12 @@ import React, { useMemo } from 'react'
 import isUrl from 'is-url'
 import { isKeyHotkey } from 'is-hotkey'
 import { css } from '@emotion/css'
-import { Editable, withReact, useSlate, useSelected } from '@deepnote/slate-react'
+import {
+  Editable,
+  withReact,
+  useSlate,
+  useSelected,
+} from '@deepnote/slate-react'
 import * as SlateReact from '@deepnote/slate-react'
 import {
   Transforms,

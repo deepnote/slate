@@ -2,7 +2,7 @@
  * Utilities for single-line deletion
  */
 
-import { Range, Editor } from 'slate'
+import { Range, Editor } from '@deepnote/slate'
 import { ReactEditor } from '..'
 
 const doRectsIntersect = (rect: DOMRect, compareRect: DOMRect) => {

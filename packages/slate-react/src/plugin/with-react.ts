@@ -1,5 +1,12 @@
 import ReactDOM from 'react-dom'
-import { Editor, Node, Path, Operation, Transforms, Range } from 'slate'
+import {
+  Editor,
+  Node,
+  Path,
+  Operation,
+  Transforms,
+  Range,
+} from '@deepnote/slate'
 
 import { ReactEditor } from './react-editor'
 import { Key } from '../utils/key'
