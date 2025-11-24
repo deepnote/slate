@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     if: |
       github.event.issue.pull_request &&
-      github.event.sender.login == 'ianstormtaylor' &&
+      (github.event.sender.login == 'ianstormtaylor' || github.event.sender.login == 'saltenas') &&
       startsWith(github.event.comment.body, '/release:next')
     steps:
       - name: Checkout repo
@@ -45,10 +45,9 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: yarn
           registry-url: https://registry.npmjs.org
-          key: node16
 
       - name: Install dependencies
         run: yarn
@@ -67,11 +66,11 @@ jobs:
 
       - name: Get released version
         id: version
-        run: echo ::set-output name=version::$(node -p "require('./packages/slate/package.json').version")
+        run: echo "version=$(node -p \"require('./packages/slate/package.json').version\")" >> $GITHUB_OUTPUT
 
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            A new release has been made for this pull request. You can install it with `yarn add slate@${{ steps.version.outputs.version }}`.
+            A new release has been made for this pull request. You can install it with `yarn add @deepnote/slate@${{ steps.version.outputs.version }}`.
