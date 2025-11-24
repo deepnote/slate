@@ -9,6 +9,7 @@ declare module 'slate' {
     }
     Range: BaseRange & {
       placeholder?: string
+      multiBlock?: boolean
     }
   }
 }
