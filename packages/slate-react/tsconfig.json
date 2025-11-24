@@ -3,7 +3,19 @@
   "include": ["src/**/*"],
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "slate": ["../../packages/slate/src"],
+      "@deepnote/slate": ["../../packages/slate/src"],
+      "slate-history": ["../../packages/slate-history/src"],
+      "@deepnote/slate-history": ["../../packages/slate-history/src"],
+      "slate-hyperscript": ["../../packages/slate-hyperscript/src"],
+      "@deepnote/slate-hyperscript": ["../../packages/slate-hyperscript/src"],
+      "slate-react": ["./src"],
+      "@deepnote/slate-react": ["./src"]
+    }
   },
-  "references": [{ "path": "../slate" }]
+  "references": []
 }

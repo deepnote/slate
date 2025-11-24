@@ -296,7 +296,7 @@ export const createEditor = (): Editor => {
         }
       }
     },
-  }
+  } as unknown as Editor
 
   return editor
 }
